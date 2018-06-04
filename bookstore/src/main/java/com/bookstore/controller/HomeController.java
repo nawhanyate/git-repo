@@ -101,6 +101,7 @@ public class HomeController {
 	
 	@RequestMapping("/bookshelf")
 	public String bookshelf(Model model, Principal principal) {
+		System.out.println("Hello world");
 		if(principal != null) {
 			String username = principal.getName();
 			User user = userService.findByUsername(username);
